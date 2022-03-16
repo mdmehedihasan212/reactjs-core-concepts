@@ -37,17 +37,12 @@
   }
 }
 
-.container{
-  color: #61dafb;
+.personStyle{
+  color: #1b8aa9;
+  background-color: aqua;
   padding: 20px;
+  margin: 20px;
   border: 3px solid rgb(233, 10, 166);
   border-radius: 20px;
 
-}
-.music{
-  background-color: #61dafb;
-  border: 3px solid rgb(233, 10, 166);
-  border-radius: 20px;
-  padding: 20px;
-  margin: 20px;
 }
