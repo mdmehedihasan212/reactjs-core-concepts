@@ -9,19 +9,36 @@ const friendsStyle = {
   padding: '20px',
   margin: '20px'
 }
+const singers = [
+  { name: 'asif', job: 'singer', catagory: 'cheka' },
+  { name: 'aiub bacchu', job: 'singer', catagory: 'tara' },
+  { name: 'james', job: 'singer', catagory: 'cheka2' }
+]
 
 function App() {
+  const nayoks = ['razzak', 'alomgir', 'josim', 'salman shah', 'manna', 'chancol choudury'];
+
   return (
     <div className="App">
-      <Person nikeName="Sobuz" age="26" hight="5.9" job="salesman"></Person>
-      <Person nikeName="mehedi" age="20" hight="5.8" job="salesperson"></Person>
-      <Person nikeName="Sabuz" age="22" hight="5.9" job="salesrepresentative"></Person>
+      {
+        nayoks.map(nayok => <li>Name: {nayok}</li>)
+      }
+
+      {
+        nayoks.map(nayok => <Person name={nayok}></Person>)
+      }
+      {
+        singers.map(singer => <Friends name={singer.name}></Friends>)
+      }
+      {/* <Person nikeName={nayoks[0]} age="20" hight="5.8" job="salesperson"></Person>
+      <Person nikeName={nayoks[1]} age="20" hight="5.8" job="salesperson"></Person>
+      <Person nikeName={nayoks[2]} age="22" hight="5.9" job="salesrepresentative"></Person> */}
       <Family mother="Selina Haque" son="Abdus Sami" sister="Aliza" brother="shawon" wife="samiya"></Family>
       <Family mother="Selina Haque" son="Abdus Sami" sister="Aliza" brother="shawon" wife="samiya"></Family>
       <Family mother="Selina Haque" son="Abdus Sami" sister="Aliza" brother="shawon" wife="samiya"></Family>
-      <Friends name="Monir" relation="School Life" contuct="Telegram" status="Good"></Friends>
+      {/* <Friends name="Monir" relation="School Life" contuct="Telegram" status="Good"></Friends>
       <Friends name="Bahadur" relation="Job Purpos" contuct="WhatsApp" status="Good"></Friends>
-      <Friends name="Imran" relation="Job Purpos" contuct="Mobile" status="Good"></Friends>
+      <Friends name="Imran" relation="Job Purpos" contuct="Mobile" status="Good"></Friends> */}
 
     </div>
   );
@@ -33,8 +50,8 @@ function Person(props) {
   console.log(props);
   return (
     <div className="personStyle">
-      <h1>Md Mehedi Hasan</h1>
-      <p>Nike Name: {props.nikeName} Age: {props.age} Height: {props.hight} Job: {props.job}</p>
+      <h1>{props.name}</h1>
+      <p></p>
     </div>
   );
 
@@ -52,8 +69,7 @@ function Family(props) {
 function Friends(props) {
   return (
     <div style={friendsStyle}>
-      <h1>I Have Some Good Friends</h1>
-      <p>Name: {props.name} Relation: {props.relation} Status: {props.status} Contuct: {props.contuct}</p>
+      <h1>{props.name}</h1>
     </div>
   )
 }
