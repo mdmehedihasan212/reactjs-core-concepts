@@ -38,11 +38,11 @@
 }
 
 .personStyle{
-  color: #1b8aa9;
-  background-color: aqua;
+  color: #ffff;
+  background-color: rgb(255, 0, 0);
   padding: 20px;
   margin: 20px;
-  border: 3px solid rgb(233, 10, 166);
+  border: 3px solid rgb(71, 15, 224);
   border-radius: 20px;
 
 }
